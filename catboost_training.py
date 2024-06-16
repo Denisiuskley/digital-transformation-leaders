@@ -374,7 +374,7 @@ if isSubmit:
 
 else:
     import telebot
-    bot = telebot.TeleBot('6130201911:AAHrpW5qu7DmHbS-2nf5gHPAN7vxLlZYR7o')
+    bot = telebot.TeleBot('')
     import optuna
     from time import sleep
     optuna.logging.set_verbosity(optuna.logging.WARN)
