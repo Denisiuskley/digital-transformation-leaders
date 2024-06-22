@@ -212,7 +212,7 @@ for geohash in ['geohash_4', 'geohash_5']:
                     "embedding": []
                 }
                 for client_id, rows in tqdm(df.groupby("client_id"), smoothing = 0):
-                    unique_values = rows["geohash_4"].unique()
+                    unique_values = rows[geohash].unique()
                     filtered = [geohashes_dict[v] for v in unique_values if v in geohashes_dict]
                     if len(filtered) == 0:
                         avg_vec = np.zeros((embedding_dim, ))
@@ -231,7 +231,7 @@ for geohash in ['geohash_4', 'geohash_5']:
                     "embedding": []
                 }
                 for client_id, rows in tqdm(df.groupby("client_id"), smoothing = 0):
-                    unique_values = rows["geohash_4"].unique()
+                    unique_values = rows[geohash].unique()
                     filtered = [geohashes_dict[v] for v in unique_values if v in geohashes_dict]
                     if len(filtered) == 0:
                         avg_vec = np.zeros((embedding_dim, ))
